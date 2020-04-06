@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="VedioCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zfa-q8-vg5">
+                        <rect key="frame" x="20" y="10" width="60" height="60"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHC-26-i79">
+                        <rect key="frame" x="20" y="10" width="60" height="60"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="6H2-tO-ccd"/>
+                            <constraint firstAttribute="height" constant="60" id="yBs-Xv-ztx"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEP-ed-t6d">
+                        <rect key="frame" x="95" y="8" width="195" height="37"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XJ-xn-Cil">
+                        <rect key="frame" x="95" y="55" width="150" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="0Z8-dZ-P9w"/>
+                            <constraint firstAttribute="height" constant="20" id="i5N-hL-qEf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1XJ-xn-Cil" secondAttribute="bottom" constant="5" id="2JG-GB-Egh"/>
+                <constraint firstAttribute="trailing" secondItem="oEP-ed-t6d" secondAttribute="trailing" constant="30" id="9eN-3N-k0B"/>
+                <constraint firstItem="oEP-ed-t6d" firstAttribute="leading" secondItem="aHC-26-i79" secondAttribute="trailing" constant="15" id="JwA-3g-Cf6"/>
+                <constraint firstItem="Zfa-q8-vg5" firstAttribute="leading" secondItem="aHC-26-i79" secondAttribute="leading" id="Zsb-fR-hEZ"/>
+                <constraint firstItem="Zfa-q8-vg5" firstAttribute="top" secondItem="aHC-26-i79" secondAttribute="top" id="a7v-gX-B8d"/>
+                <constraint firstAttribute="bottom" secondItem="oEP-ed-t6d" secondAttribute="bottom" constant="35" id="g35-N2-oQ8"/>
+                <constraint firstItem="1XJ-xn-Cil" firstAttribute="leading" secondItem="oEP-ed-t6d" secondAttribute="leading" id="lbe-cE-jMF"/>
+                <constraint firstItem="Zfa-q8-vg5" firstAttribute="height" secondItem="aHC-26-i79" secondAttribute="height" id="nfp-8O-Ikl"/>
+                <constraint firstItem="aHC-26-i79" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="s7P-gI-Jrs"/>
+                <constraint firstItem="oEP-ed-t6d" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="sXM-qI-kpg"/>
+                <constraint firstItem="Zfa-q8-vg5" firstAttribute="width" secondItem="aHC-26-i79" secondAttribute="width" id="vOO-kX-m8s"/>
+                <constraint firstItem="aHC-26-i79" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="zkt-cM-zLv"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="Zfa-q8-vg5" id="jUm-HE-K3Z"/>
+                <outlet property="playView" destination="aHC-26-i79" id="OQy-ka-USq"/>
+                <outlet property="timelabel" destination="1XJ-xn-Cil" id="Uoc-5B-Ytm"/>
+                <outlet property="titleLabel" destination="oEP-ed-t6d" id="OIv-iY-bcy"/>
+            </connections>
+            <point key="canvasLocation" x="480" y="340"/>
+        </collectionViewCell>
+    </objects>
+</document>
