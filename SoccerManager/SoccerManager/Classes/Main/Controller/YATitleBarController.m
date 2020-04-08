@@ -186,6 +186,7 @@
     defaultVC.view.frame = CGRectMake(self.initialIndex * kScreenWidth, 0, kScreenWidth, self.scrollView.frame.size.height);
     [self addChildViewController:defaultVC];
     [self.scrollView addSubview:defaultVC.view];
+    [self.scrollView setContentOffset:CGPointMake(self.initialIndex * kScreenWidth, 0)];
     self.currentVC = defaultVC;
     self.currentIndex = 0;
     
@@ -193,6 +194,7 @@
     CGRect rect = CGRectMake(0, 0, kScreenWidth, self.titleBarHeight);
     _titleBar = [YATitleBar titleBarWithFrame:rect andTitles:self.titles];
     _titleBar.delegate = self;
+    [_titleBar setSelectedButton:self.initialIndex];
     [self.view addSubview:_titleBar];
 }
 
@@ -203,7 +205,7 @@
         viewContoller.edgesForExtendedLayout = UIRectEdgeNone;
         //Review:如果viewContoller的容器是navigationController,则设置viewContoller.view的尺寸从navigationBar的下边沿开始算;
     }
-    if(self.titleBarHeight == 0) {
+    if (self.titleBarHeight == 0) {
         self.titleBarHeight = kTitleBarHeight;
     }
     [viewContoller addChildViewController:self];

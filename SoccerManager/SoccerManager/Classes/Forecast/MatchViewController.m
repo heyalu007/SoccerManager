@@ -57,6 +57,7 @@ NSURLSessionDataDelegate
     YATitleBarController *titleBarController = [[YATitleBarController alloc] init];
     titleBarController.viewControllers = @[importVc, allVc, overVc];
     titleBarController.titles = @[@"重要", @"全部", @"已结束"];
+    titleBarController.initialIndex = 1;
     [titleBarController showInViewContoller:self];
 
 //    UIApplication *application = [UIApplication sharedApplication];

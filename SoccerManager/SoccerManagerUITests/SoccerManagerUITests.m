@@ -35,6 +35,21 @@
 - (void)testExample {
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.tabBars.buttons[@"\u53d1\u73b0"] tap];
+    
+    XCUIElementQuery *tablesQuery = app.tables;
+        [tablesQuery/*@START_MENU_TOKEN@*/.staticTexts[@"\u5176\u5b83"]/*[[".cells.staticTexts[@\"\\u5176\\u5b83\"]",".staticTexts[@\"\\u5176\\u5b83\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ swipeUp];
+    [tablesQuery.staticTexts[@"\u5708\u5b50"] tap];
+    
+    XCUIElement *navcBackButton = app.navigationBars[@"\u53d1\u73b0"].buttons[@"navc back"];
+    [navcBackButton tap];
+    [tablesQuery/*@START_MENU_TOKEN@*/.staticTexts[@"\u8bba\u575b"]/*[[".cells.staticTexts[@\"\\u8bba\\u575b\"]",".staticTexts[@\"\\u8bba\\u575b\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
+    [tablesQuery/*@START_MENU_TOKEN@*/.staticTexts[@"\u7ade\u731c"]/*[[".cells.staticTexts[@\"\\u7ade\\u731c\"]",".staticTexts[@\"\\u7ade\\u731c\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
+    [tablesQuery/*@START_MENU_TOKEN@*/.staticTexts[@"\u56fe\u7247"]/*[[".cells.staticTexts[@\"\\u56fe\\u7247\"]",".staticTexts[@\"\\u56fe\\u7247\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
+    [navcBackButton tap];
+    
 }
 
 @end
